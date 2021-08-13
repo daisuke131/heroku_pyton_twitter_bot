@@ -1,4 +1,4 @@
-from concurrent.futures import ThreadPoolExecutor
+# from concurrent.futures import ThreadPoolExecutor
 
 from gspread.models import Worksheet
 
@@ -16,19 +16,30 @@ class BuyableTweet:
 
     def buy_tweet(self):
         row_count = 0
-        with ThreadPoolExecutor(THREAD_COUNT) as executor:
-            for hash_tag, url, afili_url, is_buyable in self.ws.get_all_values():
-                row_count += 1
-                if row_count == 1:  # 一行目はカラム名なのでスルー
-                    continue
-                executor.submit(
-                    self.tweet_decision,
-                    hash_tag,
-                    url,
-                    afili_url,
-                    int(is_buyable),
-                    row_count,
-                )
+        # with ThreadPoolExecutor(THREAD_COUNT) as executor:
+        #     for hash_tag, url, afili_url, is_buyable in self.ws.get_all_values():
+        #         row_count += 1
+        #         if row_count == 1:  # 一行目はカラム名なのでスルー
+        #             continue
+        #         executor.submit(
+        #             self.tweet_decision,
+        #             hash_tag,
+        #             url,
+        #             afili_url,
+        #             int(is_buyable),
+        #             row_count,
+        #         )
+        for hash_tag, url, afili_url, is_buyable in self.ws.get_all_values():
+            row_count += 1
+            if row_count == 1:  # 一行目はカラム名なのでスルー
+                continue
+            self.tweet_decision(
+                hash_tag,
+                url,
+                afili_url,
+                int(is_buyable),
+                row_count,
+            )
         print(row_count)
 
     def tweet_decision(
