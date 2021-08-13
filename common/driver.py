@@ -5,10 +5,10 @@ from selenium.webdriver.chrome.options import Options
 
 
 class Driver:
-    def __init__(self, headless_flg: bool):
-        self.driver = self.driver_setting(headless_flg)
+    def __init__(self):
+        self.driver = self.driver_setting()
 
-    def driver_setting(self, headless_flg: bool):
+    def driver_setting(self):
         # user_agent_random = fetch_user_agent()
         # ドライバーの読み込み
         options = Options()

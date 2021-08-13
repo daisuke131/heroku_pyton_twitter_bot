@@ -35,7 +35,7 @@ class BuyableTweet:
         self, hash_tag: str, url: str, afili_url: str, is_buyable: int, row_count: int
     ) -> None:
         try:
-            driver = Driver(True)
+            driver = Driver()
             driver.get(url)
 
             if "amazon" in url:
