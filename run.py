@@ -52,13 +52,15 @@ class BuyableTweet:
             if "amazon" in url:
                 selector = "#add-to-cart-button"
                 platform = "Amazon"
-                title = driver.el_selector("#producaaaaaaaaatTitle").text.replace(
-                    "\n", ""
-                )
+                title = driver.el_selector("#productTitle").text.replace("\n", "")
             elif "item.rakuten" in url:
                 selector = ".cart-button.add-cart.new-cart-button"
                 platform = "楽天市場"
-                title = driver.el_selector(".item_name > b").text.replace("\n", "")
+                try:
+                    title = driver.el_selector(".item_name > b").text.replace("\n", "")
+                except Exception:
+                    print("楽天タイトル取得できない")
+                    return
             elif "books.rakuten" in url:
                 selector = ".new_addToCart"
                 platform = "楽天ブックス"
