@@ -41,18 +41,15 @@ class BuyableTweet:
             if "amazon" in url:
                 selector = "#add-to-cart-button"
                 platform = "Amazon"
-                title = driver.el_selector(
-                    "#productTitle").text.replace("\n", "")
+                title = driver.el_selector("#productTitle").text.replace("\n", "")
             elif "item.rakuten" in url:
                 selector = ".cart-button.add-cart.new-cart-button"
                 platform = "楽天市場"
-                title = driver.el_selector(
-                    ".item_name > b").text.replace("\n", "")
+                title = driver.el_selector(".item_name > b").text.replace("\n", "")
             elif "books.rakuten" in url:
                 selector = ".new_addToCart"
                 platform = "楽天ブックス"
-                title = driver.el_selector(
-                    "#productTitle").text.replace("\n", "")
+                title = driver.el_selector("#productTitle").text.replace("\n", "")
             else:
                 return
 
@@ -72,6 +69,7 @@ class BuyableTweet:
                 if is_buyable == 1:
                     self.ws.update_cell(row_count, 4, 0)
         except Exception:
+            print(Exception)
             print(f"{row_count}番目失敗")
             pass
 
