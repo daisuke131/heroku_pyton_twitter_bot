@@ -1,9 +1,6 @@
 import os
-
 import random
 from datetime import datetime
-
-from dotenv import load_dotenv
 
 
 def hyphen_now():
@@ -11,7 +8,6 @@ def hyphen_now():
 
 
 def fetch_user_agent() -> str:
-    load_dotenv()
     user_agent = [
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
         + "(KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",

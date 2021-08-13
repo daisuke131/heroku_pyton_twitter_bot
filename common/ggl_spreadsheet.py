@@ -1,6 +1,7 @@
 import os
 
 import gspread
+
 # import pandas as pd
 from dotenv import load_dotenv
 from gspread.models import Worksheet
@@ -9,7 +10,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 JASON_FILE_NAME = "python-buyable-twitter-bot-0bb63e591ec9.json"
 JSON_PATH = os.path.join(os.getcwd(), JASON_FILE_NAME)
 load_dotenv()
-SPREAD_SHEET_KEY = os.getenv("SPREAD_SHEET_KEY")
+SPREAD_SHEET_KEY = os.environ.get("SPREAD_SHEET_KEY")
 
 
 class Gspread:
