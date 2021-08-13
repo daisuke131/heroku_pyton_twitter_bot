@@ -1,6 +1,5 @@
 import os
 
-from dotenv import load_dotenv
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
@@ -8,7 +7,6 @@ from webdriver_manager.utils import ChromeType
 
 from common.util import fetch_user_agent
 
-load_dotenv()
 # BROWSER_NAME = os.getenv("BROWSER")
 BROWSER_NAME = "chrome"
 
@@ -62,6 +60,7 @@ class Driver:
                 )
             return driver
         except Exception:
+            print("ドライバーの読み込みに失敗")
             return None
 
     def get(self, url: str):
