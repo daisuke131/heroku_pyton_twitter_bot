@@ -1,14 +1,12 @@
 import os
 
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.firefox import GeckoDriverManager
-from webdriver_manager.utils import ChromeType
 
 from common.util import fetch_user_agent
 
-# BROWSER_NAME = os.getenv("BROWSER")
-BROWSER_NAME = "chrome"
+# from webdriver_manager.chrome import ChromeDriverManager
+# from webdriver_manager.firefox import GeckoDriverManager
+# from webdriver_manager.utils import ChromeType
 
 
 class Driver:
@@ -18,14 +16,11 @@ class Driver:
     def driver_setting(self, headless_flg: bool):
         user_agent_random = fetch_user_agent()
         # ドライバーの読み込み
-        if "firefox" in BROWSER_NAME:
-            options = webdriver.FirefoxOptions()
-        else:
-            options = webdriver.ChromeOptions()
+        options = webdriver.ChromeOptions()
 
         # ヘッドレスモードの設定
-        if os.name == "posix" or headless_flg:  # Linux　➙　本番環境のためHeadless
-            options.add_argument("--headless")
+        # if os.name == "posix" or headless_flg:  # Linux　➙　本番環境のためHeadless
+        options.add_argument("--headless")
 
         # options.add_argument("--user-agent=" + user_agent)
         options.add_argument("--user-agent=" + user_agent_random)
@@ -45,19 +40,7 @@ class Driver:
         options.add_argument("--lang=ja")
 
         try:
-            if "firefox" in BROWSER_NAME:
-                driver = webdriver.Firefox(
-                    executable_path=GeckoDriverManager().install(), options=options
-                )
-            elif "chromium" in BROWSER_NAME:
-                driver = webdriver.Chrome(
-                    ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install(),
-                    options=options,
-                )
-            else:
-                driver = webdriver.Chrome(
-                    ChromeDriverManager().install(), options=options
-                )
+            driver = webdriver.Chrome(options=options)
             return driver
         except Exception:
             print("ドライバーの読み込みに失敗")

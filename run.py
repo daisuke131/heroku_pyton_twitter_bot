@@ -36,7 +36,6 @@ class BuyableTweet:
     ) -> None:
         try:
             driver = Driver(True)
-            print(driver)
             driver.get(url)
 
             if "amazon" in url:
