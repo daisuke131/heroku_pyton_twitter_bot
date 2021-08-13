@@ -1,12 +1,6 @@
-import os
-
 from selenium import webdriver
 
 from common.util import fetch_user_agent
-
-# from webdriver_manager.chrome import ChromeDriverManager
-# from webdriver_manager.firefox import GeckoDriverManager
-# from webdriver_manager.utils import ChromeType
 
 
 class Driver:
@@ -16,6 +10,7 @@ class Driver:
     def driver_setting(self, headless_flg: bool):
         user_agent_random = fetch_user_agent()
         # ドライバーの読み込み
+        driver_path = "/app/.chromedriver/bin/chromedriver"
         options = webdriver.ChromeOptions()
 
         # ヘッドレスモードの設定
@@ -40,7 +35,7 @@ class Driver:
         options.add_argument("--lang=ja")
 
         try:
-            driver = webdriver.Chrome(options=options)
+            driver = webdriver.Chrome(options=options, executable_path=driver_path)
             return driver
         except Exception:
             print("ドライバーの読み込みに失敗")
