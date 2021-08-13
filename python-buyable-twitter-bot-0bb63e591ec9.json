@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "python-buyable-twitter-bot",
+  "private_key_id": "0bb63e591ec9788f2818b6943bdf9e84280df4c9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCQaE3bX/ygtXxu\ndW/WnM5nbKI/CDMH1MkYHh3Um3K72HJl4+ejrUQE5VEE3Xit5qzYyNzlWAq3Ms7j\nlmE37Qgz6kumXogpw1Ji2JS9e6usPTxI1BXkFq0NfSRNcvBfut5Wn7rsId8URo4B\nd8cMTss+tzyXtUB31S+aDgFJ7ZuC8othHyB0JAhQ095qPZCsjlTGqyUv3KnjThX5\nghw1alnzKOeLVYnBcWLtMOlSkCkXT/ay9JrMDUDkeFjV44PDO75dTMJYdPRJ30E8\ntgd7LvMYgCbrRfmgeb+nOWtAEEwZi9U0MwsR/GmTbC/dYCCiUKzuskk5s0v1N/EG\nazcNkOEHAgMBAAECggEAJcyPmJ0q8Nwgen9V62y3IF5Qp8QbK3EYxC3Z7BVWdnIF\nG8OIlhDb7ZYi222nUYnAc6w8GfIuN97eRbdOskdirsgkziMPbDMaxRHg+So+eQK8\nXWnaYw5GdPHtRzKPVdeBrFX6JSYGkPWY5Sx3lzKmw79N5n4EpnlQkPgagUHnQ2KZ\nwwZOl5EWcL2xJURRBQrUULw8poMQhl/TBucbRUjflZ2X+SRF2ie2mhOVvTARup3g\nHOzQKSXPTv8I9x12Bsl51SJTQ0u0bNZrkwRR1FXvl1pfEdFlybEEgsHgPXNRCPlO\n88KUgIYY7YYya3H1K+27XrGUNWPBCL4F0h2zFF04HQKBgQDF+q/g2s82ryiPJbBp\nPKvz3bwrVk5wlagu3Z6cSGuBH41EMePkY7KaFlJbCMojaYOM4fZd9dv+U+ZadUY1\nEM21YzUDo7Abb4KxG07ykZYhYDfFLyOcM6Cqr2UEPzJsCN7aiNTIwrswb3i7wOxT\nH4PZCqMx3oz+7lmZVRtyrUsRQwKBgQC6umnxBdH+muoZxrRiA0DMvIstxXkjBh2v\nbz9m0bD8taeJuu76gQ10rt9Vpovj3hxcZ0VUmjtActK++VUGWHrvM/KYXdtRcHJM\nyl1cjIoVaiU7OQbnmQYHDjlA3L6Hf8Qtqx0woaqp7Zs2qao51xKmHXRPLT8U/YLF\n2oWOCi0i7QKBgFoBzaIZeGlxGqxxwxElHzvgjCLbuw+eSnb8FJcSqaVrlcryL5xu\n4w0ApvJyPYv59W/Ab0RqeVjYBfsMJB4OBKe5cam06mSevrkMJElNfQaxeslv0+24\n3wuab/+NR7wsED0kRjD7rySnGSmq3QYxZrzvBCCxAEMKU7vNIIxzUpSHAoGAAe6H\nxgyPXZjwrw+VMiZidzvEHNccJ7aafAQkncWxlQu0DgK3EjRflUNx4Ar3C4ZyuKoA\n150427PUZlFiBczIiMz6x4TBDhihthWp3Zk+nHYaqIAwiBjXLR+CjB88gV5bAzXv\n+V7SyytAHdKnhi2pbbqER4VqT6dHwRA/rXaBfQkCgYEAmq/dcEWJUMuSVKfE3JP4\nneE0cjJYCpcR23y84NG0NQfrgOmCFYH33KXk9P/vcl1kFtFRuyjSOeRMk8tc/mkg\nhkz0K0IHzlG5nDHJVx2bCiQxLyFUgeSUVNzd40wOQ4K1+hye7KbvPZDY0AeV47/g\nlcdMgMRvg1JfUDSO/Z+TIFE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "python-buyable-twitter-bot@python-buyable-twitter-bot.iam.gserviceaccount.com",
+  "client_id": "106894428758832406706",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/python-buyable-twitter-bot%40python-buyable-twitter-bot.iam.gserviceaccount.com"
+}
