@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 # from common.util import fetch_user_agent
 
@@ -11,7 +12,7 @@ class Driver:
         # user_agent_random = fetch_user_agent()
         # ドライバーの読み込み
         driver_path = "/app/.chromedriver/bin/chromedriver"
-        options = webdriver.ChromeOptions()
+        options = Options()
 
         # ヘッドレスモードの設定
         # if os.name == "posix" or headless_flg:  # Linux　➙　本番環境のためHeadless

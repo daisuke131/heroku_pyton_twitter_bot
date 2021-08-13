@@ -73,8 +73,8 @@ class BuyableTweet:
         except Exception:
             print(f"{row_count}番目失敗")
             pass
-
-        driver.quit()
+        finally:
+            driver.quit()
 
     def formating_hash_tag(self, hash_tag: str) -> str:
         hash_tag_list = hash_tag.split()
